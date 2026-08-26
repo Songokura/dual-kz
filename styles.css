@@ -144,16 +144,20 @@ body.menu-open .header { z-index: 320; background: transparent; box-shadow: none
 .hero-on .nav a { color: rgba(255,255,255,.92); }
 
 .header__right { display: flex; align-items: center; gap: 14px; }
-.lang { display: flex; gap: 2px; background: rgba(14,27,54,.07); border-radius: 999px; padding: 3px; }
-.hero-on .lang { background: rgba(255,255,255,.14); }
+/* Переключатель языка — сегментированный контрол RU / KZ / EN (стандарт студии) */
+.lang { display: flex; gap: 0; background: rgba(14,27,54,.07); border-radius: 10px; padding: 3px; }
+.hero-on .lang { background: rgba(255,255,255,.16); }
 .lang button {
-  border: 0; background: transparent; border-radius: 999px;
-  padding: 5px 11px; font-size: 12px; font-weight: 700; letter-spacing: .04em;
+  border: 0; background: transparent; border-radius: 7px; cursor: pointer;
+  padding: 6px 13px; font-size: 12px; font-weight: 700; letter-spacing: .06em;
   color: var(--muted); transition: background .25s, color .25s;
 }
-.hero-on .lang button { color: rgba(255,255,255,.75); }
-.lang button.is-active { background: var(--paper); color: var(--ink); box-shadow: 0 2px 8px rgba(14,27,54,.12); }
+.lang button:hover { color: var(--ink); }
+.hero-on .lang button { color: rgba(255,255,255,.8); }
+.hero-on .lang button:hover { color: #fff; }
+.lang button.is-active { background: var(--paper); color: var(--ink); box-shadow: 0 1px 3px rgba(14,27,54,.18); }
 .hero-on .lang button.is-active { background: #fff; color: var(--ink); }
+.lang button:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
 
 .burger { display: none; position: relative; width: 44px; height: 44px; border: 0; background: transparent; z-index: 320; }
 .burger span {
