@@ -238,9 +238,12 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 }
 .hero__title .w {
   display: inline-block; overflow: hidden; vertical-align: bottom;
+  /* маска анимации равна строке и срезала выносные элементы (у, ұ, ү, ғ, д, ц, щ):
+     опускаем низ маски паддингом и гасим его отрицательным margin, чтобы вёрстка не поехала */
+  padding-bottom: .24em; margin-bottom: -.24em;
 }
 .hero__title .w > span {
-  display: inline-block; transform: translateY(110%);
+  display: inline-block; transform: translateY(140%);
   animation: wordUp .9s var(--ease) forwards;
 }
 @keyframes wordUp { to { transform: none; } }
