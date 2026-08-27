@@ -18,8 +18,8 @@
       hero_title: 'Показываем Казахстан — и учим показывать',
       hero_sub: 'DUAL.KZ — туристский информационно-учебный центр: авторские экскурсии и туры по всему Казахстану и профессиональная подготовка гидов и экскурсоводов.',
       hero_cta1: 'Подобрать тур', hero_cta2: 'Курсы гидов в Астане',
-      hero_trust1: 'Учредитель СРО «KazGuides» — ассоциации гидов РК при WFTGA',
-      hero_trust2: 'лет руководителя в туристской отрасли Казахстана',
+      hero_trust1: 'Учредитель СРО «KazGuides» — ассоциации гидов РК в составе WFTGA',
+      hero_trust2: 'лет опыта руководителя компании в туризме Казахстана',
       hero_trust3: 'Знак качества «Сапа белгісі» от Kazakh Tourism',
       dirs_kicker: 'Два направления', dirs_title: 'Одна команда — две дороги',
       dirs_sub: 'Мы принимаем гостей Казахстана — и готовим профессионалов, которые их встречают. Выберите свою дорогу.',
@@ -43,7 +43,7 @@
       tour2_title: 'Чарын и юг',
       tour2_text: 'Каньоны, горы и степные дороги Семиречья — самые кинематографичные пейзажи страны.',
       tour3_title: 'Сакральные маршруты',
-      tour3_text: 'Түркістан, древние мавзолеи и святые места Великой степи — путешествия к истокам.',
+      tour3_text: 'Туркестан, древние мавзолеи и святые места Великой степи — путешествия к истокам.',
       tour4_title: 'Авторские маршруты',
       tour4_text: 'Маршруты, которых нет в каталогах: разрабатываем программу под ваши интересы, сроки и ритм.',
       tours_note: 'Расскажите, что вам интересно, — пришлём варианты программ, даты и цены в WhatsApp.',
@@ -57,7 +57,7 @@
       for_li3: 'Индивидуальные и групповые форматы',
       for_cta: 'Написать в WhatsApp',
       tr_kicker: 'Туризм · 04', tr_title: 'Трансфер и сопровождение',
-      tr_lead: 'Гость под заботой с первой минуты: табличка с именем на выходе, помощь с багажом, комфортная подача машины и сопровождающий, который отвечает за группу в пути.',
+      tr_lead: 'Гость окружён заботой с первой минуты: табличка с именем в зале прилёта, помощь с багажом, комфортная подача машины и сопровождающий, который отвечает за группу в пути.',
       tr_li1: 'Встречи и проводы в аэропорту Астаны',
       tr_li2: 'Трансферы по городу и в другие регионы',
       tr_li3: 'Трансферные сопровождающие для туристских групп',
@@ -67,7 +67,7 @@
       tr_partner: 'Совместно с этноцентром TAMYR. Путешествуй с комфортом!',
       tr_cta: 'Обсудить трансфер',
       et_kicker: 'Туризм · 05', et_title: 'Этнокультурные программы',
-      et_lead: 'Традиции Великой степи — вживую: юрта и шаңырақ, домбра, национальная кухня от баурсаков до бешбармака, ремёсла и обычаи гостеприимства.',
+      et_lead: 'Традиции Великой степи — вживую: юрта и шанырак, домбра, национальная кухня от баурсаков до бешбармака, ремёсла и обычаи гостеприимства.',
       et_chip1: 'Традиции и обряды', et_chip2: 'Национальная кухня', et_chip3: 'Ремёсла и мастер-классы',
       et_partner: 'Партнёр наших программ — этноцентр TAMYR с настоящей юртой.',
       et_partner_ig: 'TAMYR в Instagram',
@@ -152,6 +152,7 @@
       gal_f_grad: 'Выпускники',
       gal_f_tours: 'Маршруты',
       gal_f_ind: 'Отрасль',
+      gal_more: 'Показать ещё',
       rev_title: 'Отзывы туристов и выпускников',
       rev_text: 'Мы собираем живые впечатления наших гостей и выпускников — скоро они появятся здесь. А пока загляните в наш Instagram: там путешествия происходят в реальном времени.',
       ab_kicker: 'О компании', ab_title: 'Кто мы',
@@ -160,7 +161,7 @@
       ab_text3: 'В краткосрочном образовании мы работаем с 2015 года — больше десяти лет. За это время центр выпустил более 1500 квалифицированных специалистов туризма, и свыше 60% из них работают в отрасли.',
       ct_kicker: 'Контакты', ct_title: 'Свяжитесь с нами',
       ct_sub: 'Отвечаем в WhatsApp ежедневно. Выберите тему — мы направим вас к нужному специалисту.',
-      ct_addr_l: 'Адрес', ct_addr_v: 'г. Астана, ул. Женис 24/1',
+      ct_addr_l: 'Адрес', ct_addr_v: 'г. Астана, пр. Женис, 24/1',
       ct_hours_l: 'График', ct_hours_v: 'Ежедневно 09:00–21:00, круглый год',
       ct_ph1_l: 'Экскурсии по Астане', ct_ph2_l: 'Туры по Казахстану', ct_ph3_l: 'Тренинги и общие вопросы',
       cf_name: 'Ваше имя', cf_name_ph: 'Как к вам обращаться?',
@@ -175,7 +176,7 @@
       ft_guides: 'Гиды и экскурсоводы', ft_aid: 'Первая помощь',
       ft_escort: 'Сопровождающие', ft_to: 'Туроператорам и турагентам',
       ft_copy: '© ТОО Туроператор «DUAL.KZ», Астана',
-      ft_photo: 'Фото: Unsplash',
+      ft_photo: 'Часть пейзажных фото — Unsplash',
       wa_msg_excursion: 'Здравствуйте! Хочу заказать экскурсию по Астане.',
       wa_msg_tour: 'Здравствуйте! Помогите подобрать тур по Казахстану.',
       wa_msg_training: 'Здравствуйте! Хочу записаться на тренинг.',
@@ -328,6 +329,7 @@
       gal_f_grad: 'Түлектер',
       gal_f_tours: 'Маршруттар',
       gal_f_ind: 'Сала',
+      gal_more: 'Тағы көрсету',
       rev_title: 'Туристер мен түлектердің пікірлері',
       rev_text: 'Қонақтарымыз бен түлектеріміздің шынайы әсерлерін жинап жатырмыз — жақында олар осында пайда болады. Әзірге Instagram парақшамызға көз жүгіртіңіз: онда саяхаттар нақты уақытта өтіп жатыр.',
       ab_kicker: 'Компания туралы', ab_title: 'Біз кімбіз',
@@ -336,7 +338,7 @@
       ab_text3: 'Қысқа мерзімді білім беруде 2015 жылдан бері — он жылдан астам уақыт жұмыс істеп келеміз. Осы уақытта орталық 1500-ден астам білікті туризм маманын даярлады, олардың 60%-дан астамы салада жұмыс істейді.',
       ct_kicker: 'Байланыс', ct_title: 'Бізбен хабарласыңыз',
       ct_sub: 'WhatsApp-та күн сайын жауап береміз. Тақырыпты таңдаңыз — сізді қажетті маманға бағыттаймыз.',
-      ct_addr_l: 'Мекенжай', ct_addr_v: 'Астана қ., Жеңіс к-сі 24/1',
+      ct_addr_l: 'Мекенжай', ct_addr_v: 'Астана қ., Жеңіс д-лы, 24/1',
       ct_hours_l: 'Жұмыс уақыты', ct_hours_v: 'Күн сайын 09:00–21:00, жыл бойы',
       ct_ph1_l: 'Астана бойынша экскурсиялар', ct_ph2_l: 'Қазақстан бойынша турлар', ct_ph3_l: 'Тренингтер және жалпы сұрақтар',
       cf_name: 'Есіміңіз', cf_name_ph: 'Сізді қалай атайық?',
@@ -351,7 +353,7 @@
       ft_guides: 'Гидтер мен экскурсоводтар', ft_aid: 'Алғашқы көмек',
       ft_escort: 'Ілесушілер', ft_to: 'Туроператорлар мен турагенттерге',
       ft_copy: '© «DUAL.KZ» Туроператор ЖШС, Астана',
-      ft_photo: 'Фото: Unsplash',
+      ft_photo: 'Кейбір пейзаж суреттері — Unsplash',
       wa_msg_excursion: 'Сәлеметсіз бе! Астана бойынша экскурсияға тапсырыс бергім келеді.',
       wa_msg_tour: 'Сәлеметсіз бе! Қазақстан бойынша тур таңдауға көмектесіңізші.',
       wa_msg_training: 'Сәлеметсіз бе! Тренингке жазылғым келеді.',
@@ -373,7 +375,7 @@
       hero_trust1: 'Founder of KazGuides — the Kazakhstan guides association, a member of WFTGA',
       hero_trust2: 'years of our director’s experience in Kazakhstan’s tourism industry',
       hero_trust3: '“Sapa Belgisi” quality mark by Kazakh Tourism',
-      dirs_kicker: 'Two directions', dirs_title: 'One team — two roads',
+      dirs_kicker: 'Two paths', dirs_title: 'One team — two roads',
       dirs_sub: 'We welcome Kazakhstan’s guests — and train the professionals who host them. Choose your road.',
       dir1_title: 'Travel',
       dir1_text: 'Astana city tours, journeys across the regions, sacred and signature routes, inbound services for international guests, transfers and ethno-cultural programmes.',
@@ -424,11 +426,11 @@
       et_partner: 'Our programme partner is the TAMYR ethno-centre with its authentic yurt.',
       et_partner_ig: 'TAMYR on Instagram',
       et_cta: 'Discuss a programme',
-      edu_kicker: 'Direction 02 · Training in Astana',
+      edu_kicker: 'Track 02 · Training in Astana',
       edu_title: 'Training for tourism professionals',
       edu_sub: 'The training wing of DUAL.KZ: we prepare and upskill the people who work with travellers. Astana is our main campus; elsewhere in Kazakhstan we teach through our regional representatives.',
       edua_kicker: 'Enrolment open in Astana',
-      edua_title: 'Guide and tour leader courses in Astana',
+      edua_title: 'Guide and excursion guide courses in Astana',
       edua_lead: 'Astana is our home base. Classes are taught by working guides and qualified instructors who are out with travellers every day. Groups stay small and enrolment runs continuously.',
       edua_b1_t: 'Affordable price',
       edua_b1_d: 'A short course instead of years of study: entering the profession costs less than you think. Fees and schedule on request.',
@@ -444,7 +446,7 @@
       edu_stat1_b: 'since 2015', edu_stat1: 'delivering short-term professional education',
       edu_stat2: 'graduates — over 60% of them work in Kazakhstan’s tourism industry',
       edu_stat3_b: 'Hands-on', edu_stat3: 'business games, practicums and workshops led by practising, certified instructors',
-      edu1_title: '“Guide” · “Tour Leader” course',
+      edu1_title: '“Guide” · “Excursion Guide” course',
       edu1_text: 'Training and professional development: guiding methodology, route design, working with groups.',
       edu2_title: '“Travel Agent” course',
       edu2_text: 'The profession from scratch: travel products, booking, client work and the legal basics of tourism.',
@@ -472,11 +474,11 @@
       why3_title: 'Industry partnerships',
       why3_text: 'We work within Kazakhstan’s professional guiding community — together with KazGuides and the TAMYR ethno-centre.',
       why4_title: 'Guides with foreign languages',
-      why4_text: 'We source professional certified guides and tour leaders with a range of foreign languages — for individual travellers, groups, business delegations and international events across Kazakhstan. Available languages: English, Kazakh, Russian, Turkish, Chinese, German, French, Spanish, Italian, Korean and more on request.',
+      why4_text: 'We source professional certified guides and excursion guides with a range of foreign languages — for individual travellers, groups, business delegations and international events across Kazakhstan. Available languages: English, Kazakh, Russian, Turkish, Chinese, German, French, Spanish, Italian, Korean and more on request.',
       why5_title: 'Guest safety',
       why5_text: 'First aid is part of our working standard — and a subject we teach in our own courses.',
       why_copy_title: 'Our own training methodology',
-      why_copy_text: 'The programme "Methodology of guide training in the Republic of Kazakhstan. Development and creation of training programmes" is entered in the state register of copyright objects: certificate No. 32618 of 14 February 2023. We teach from our own methodology, not from someone else\'s notes.',
+      why_copy_text: 'The programme “Methodology of guide training in the Republic of Kazakhstan. Development and creation of training programmes” is entered in the state register of copyright objects: certificate No. 32618 of 14 February 2023. We teach from our own methodology, not from someone else\'s notes.',
       why_copy_link: 'View the certificate',
       team_kicker: 'Team',
       team_title: 'The people behind DUAL.KZ',
@@ -484,9 +486,9 @@
       tm1_name: 'Aigul Karatayeva',
       tm1_role: 'Head of the company',
       tm1_note: '35 years in Kazakhstan tourism. WFTGA national trainer and tourism expert.',
-      tm2_name: 'Arina Dzhamangaraeva',
+      tm2_name: 'Arina Zhamangarayeva',
       tm2_role: 'Head of education',
-      tm2_note: 'Guide and WFTGA national trainer. Runs guide and tour leader training.',
+      tm2_note: 'Guide and WFTGA national trainer. Runs guide and excursion guide training.',
       tm3_name: 'Zhanar Kurmanova',
       tm3_role: 'Head of excursions',
       tm3_note: 'Excursion programmes and work with groups.',
@@ -504,6 +506,7 @@
       gal_f_grad: 'Graduates',
       gal_f_tours: 'Routes',
       gal_f_ind: 'Industry',
+      gal_more: 'Show more',
       rev_title: 'Reviews from travellers and graduates',
       rev_text: 'We are gathering real impressions from our guests and graduates — they will appear here soon. Meanwhile, visit our Instagram: that’s where the journeys happen in real time.',
       ab_kicker: 'About us', ab_title: 'Who we are',
@@ -524,10 +527,10 @@
       ft_tag: 'Tourist information & training centre. Astana · all of Kazakhstan.',
       ft_col1: 'Travel', ft_col2: 'Training',
       ft_transfer: 'Transfers', ft_etno: 'Ethno programmes',
-      ft_guides: 'Guides & tour leaders', ft_aid: 'First aid',
+      ft_guides: 'Guides & excursion guides', ft_aid: 'First aid',
       ft_escort: 'Transfer escorts', ft_to: 'Tour operators & agents',
       ft_copy: '© Tour operator DUAL.KZ LLP, Astana',
-      ft_photo: 'Photos: Unsplash',
+      ft_photo: 'Some landscape photos: Unsplash',
       wa_msg_excursion: 'Hello! I would like to book a city tour of Astana.',
       wa_msg_tour: 'Hello! Please help me find a tour across Kazakhstan.',
       wa_msg_training: 'Hello! I would like to enrol in a training course.',
@@ -760,21 +763,40 @@
   /* ─────────────── галерея: фильтры и лайтбокс ─────── */
   var galGrid = document.getElementById('galGrid');
   if (galGrid) {
+    var GAL_STEP = 12;
     var galItems = [].slice.call(galGrid.querySelectorAll('.gal__item'));
+    var galMore = document.getElementById('galMore');
+    /* shown — весь отфильтрованный набор: по нему ходит лайтбокс.
+       В сетке видны первые galLimit, остальные открывает «Показать ещё». */
     var shown = galItems.slice();
+    var galLimit = GAL_STEP;
+
+    function galRender() {
+      galItems.forEach(function (it) { it.hidden = true; });
+      shown.slice(0, galLimit).forEach(function (it) { it.hidden = false; });
+      if (galMore) galMore.hidden = galLimit >= shown.length;
+    }
+
     [].forEach.call(document.querySelectorAll('.gal__f'), function (btn) {
       btn.addEventListener('click', function () {
         var f = btn.getAttribute('data-f');
         [].forEach.call(document.querySelectorAll('.gal__f'), function (b) { b.classList.remove('is-active'); });
         btn.classList.add('is-active');
-        shown = [];
-        galItems.forEach(function (it) {
-          var ok = (f === 'all' || it.getAttribute('data-cat') === f);
-          it.hidden = !ok;
-          if (ok) shown.push(it);
+        shown = galItems.filter(function (it) {
+          return f === 'all' || it.getAttribute('data-cat') === f;
         });
+        galLimit = GAL_STEP;
+        galRender();
       });
     });
+
+    if (galMore) {
+      galMore.addEventListener('click', function () {
+        galLimit += GAL_STEP;
+        galRender();
+      });
+    }
+    galRender();
 
     var lbox = document.getElementById('lbox');
     var lboxImg = document.getElementById('lboxImg');

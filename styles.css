@@ -728,6 +728,9 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 .gal__item img { width: 100%; height: auto; transition: transform .5s var(--ease), filter .5s var(--ease); }
 .gal__item:hover img { transform: scale(1.04); filter: brightness(1.04); }
 .gal__item[hidden] { display: none; }
+/* .btn — inline-flex, поэтому атрибут hidden сам по себе его не прячет */
+.gal__more { display: flex; justify-content: center; margin-top: 26px; }
+.gal__more .btn[hidden] { display: none; }
 @media (max-width: 1060px) { .gal__grid { columns: 3; } }
 @media (max-width: 720px)  { .gal__grid { columns: 2; column-gap: 10px; } .gal__item { margin-bottom: 10px; } }
 
