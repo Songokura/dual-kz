@@ -144,6 +144,14 @@
       tm5_name: 'Вадим Пак',
       tm5_role: 'Преподаватель: первая помощь',
       tm5_note: 'Техника безопасности и оказание первой помощи. Действующий инструктор по туризму, более 5 лет в отрасли.',
+      gal_kicker: 'Как это выглядит',
+      gal_title: 'Живые кадры',
+      gal_lead: 'Занятия и практика, вручения сертификатов, маршруты и отраслевые события — без постановочных фото со стоков.',
+      gal_f_all: 'Всё',
+      gal_f_edu: 'Обучение',
+      gal_f_grad: 'Выпускники',
+      gal_f_tours: 'Маршруты',
+      gal_f_ind: 'Отрасль',
       rev_title: 'Отзывы туристов и выпускников',
       rev_text: 'Мы собираем живые впечатления наших гостей и выпускников — скоро они появятся здесь. А пока загляните в наш Instagram: там путешествия происходят в реальном времени.',
       ab_kicker: 'О компании', ab_title: 'Кто мы',
@@ -312,6 +320,14 @@
       tm5_name: 'Вадим Пак',
       tm5_role: 'Оқытушы: алғашқы көмек',
       tm5_note: 'Қауіпсіздік техникасы және алғашқы көмек көрсету. Қолданыстағы туризм нұсқаушысы, салада 5 жылдан астам.',
+      gal_kicker: 'Бұл қалай көрінеді',
+      gal_title: 'Тірі кадрлар',
+      gal_lead: 'Сабақтар мен тәжірибе, сертификат тапсыру, маршруттар және салалық іс-шаралар — стоктан алынған қойылым суреттерсіз.',
+      gal_f_all: 'Барлығы',
+      gal_f_edu: 'Оқыту',
+      gal_f_grad: 'Түлектер',
+      gal_f_tours: 'Маршруттар',
+      gal_f_ind: 'Сала',
       rev_title: 'Туристер мен түлектердің пікірлері',
       rev_text: 'Қонақтарымыз бен түлектеріміздің шынайы әсерлерін жинап жатырмыз — жақында олар осында пайда болады. Әзірге Instagram парақшамызға көз жүгіртіңіз: онда саяхаттар нақты уақытта өтіп жатыр.',
       ab_kicker: 'Компания туралы', ab_title: 'Біз кімбіз',
@@ -480,6 +496,14 @@
       tm5_name: 'Vadim Pak',
       tm5_role: 'Trainer: first aid',
       tm5_note: 'Safety and first aid. Active tourism instructor with over 5 years in the industry.',
+      gal_kicker: 'See for yourself',
+      gal_title: 'Real moments',
+      gal_lead: 'Classes and practice, certificate ceremonies, routes and industry events — no stock photography.',
+      gal_f_all: 'All',
+      gal_f_edu: 'Training',
+      gal_f_grad: 'Graduates',
+      gal_f_tours: 'Routes',
+      gal_f_ind: 'Industry',
       rev_title: 'Reviews from travellers and graduates',
       rev_text: 'We are gathering real impressions from our guests and graduates — they will appear here soon. Meanwhile, visit our Instagram: that’s where the journeys happen in real time.',
       ab_kicker: 'About us', ab_title: 'Who we are',
@@ -730,6 +754,56 @@
       document.getElementById('cformThanks').hidden = false;
       window.open(url, '_blank', 'noopener');
       /* gtag hook: form submit, topic = topic */
+    });
+  }
+
+  /* ─────────────── галерея: фильтры и лайтбокс ─────── */
+  var galGrid = document.getElementById('galGrid');
+  if (galGrid) {
+    var galItems = [].slice.call(galGrid.querySelectorAll('.gal__item'));
+    var shown = galItems.slice();
+    [].forEach.call(document.querySelectorAll('.gal__f'), function (btn) {
+      btn.addEventListener('click', function () {
+        var f = btn.getAttribute('data-f');
+        [].forEach.call(document.querySelectorAll('.gal__f'), function (b) { b.classList.remove('is-active'); });
+        btn.classList.add('is-active');
+        shown = [];
+        galItems.forEach(function (it) {
+          var ok = (f === 'all' || it.getAttribute('data-cat') === f);
+          it.hidden = !ok;
+          if (ok) shown.push(it);
+        });
+      });
+    });
+
+    var lbox = document.getElementById('lbox');
+    var lboxImg = document.getElementById('lboxImg');
+    var lboxCount = document.getElementById('lboxCount');
+    var cur = 0;
+
+    function lboxShow(i) {
+      if (!shown.length) return;
+      cur = (i + shown.length) % shown.length;
+      var it = shown[cur];
+      lboxImg.src = it.getAttribute('data-src');
+      lboxImg.alt = it.querySelector('img').alt;
+      lboxCount.textContent = (cur + 1) + ' / ' + shown.length;
+    }
+    function lboxOpen(i) { lboxShow(i); lbox.hidden = false; document.body.style.overflow = 'hidden'; }
+    function lboxClose() { lbox.hidden = true; lboxImg.src = ''; document.body.style.overflow = ''; }
+
+    galItems.forEach(function (it) {
+      it.addEventListener('click', function () { lboxOpen(shown.indexOf(it)); });
+    });
+    document.getElementById('lboxClose').addEventListener('click', lboxClose);
+    document.getElementById('lboxPrev').addEventListener('click', function (e) { e.stopPropagation(); lboxShow(cur - 1); });
+    document.getElementById('lboxNext').addEventListener('click', function (e) { e.stopPropagation(); lboxShow(cur + 1); });
+    lbox.addEventListener('click', function (e) { if (e.target === lbox) lboxClose(); });
+    document.addEventListener('keydown', function (e) {
+      if (lbox.hidden) return;
+      if (e.key === 'Escape') lboxClose();
+      else if (e.key === 'ArrowLeft') lboxShow(cur - 1);
+      else if (e.key === 'ArrowRight') lboxShow(cur + 1);
     });
   }
 
