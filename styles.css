@@ -264,7 +264,7 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 }
 .hero__trust img {
   width: 34px; height: 34px; object-fit: contain; flex: 0 0 auto;
-  background: #fff; border-radius: 50%; padding: 3px;
+  background: #fff; border-radius: 9px; padding: 4px;
 }
 .hero__trust-num {
   flex: 0 0 auto; font-family: var(--font-d); font-size: 25px; color: var(--gold-2);
@@ -556,6 +556,14 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 .edu__wide h3 { font-family: var(--font-d); font-weight: 400; font-size: 23px; color: #fff; margin-bottom: 6px; }
 .edu__wide p { font-size: 14.5px; color: rgba(255,255,255,.72); max-width: 520px; }
 
+.note__link {
+  color: var(--blue); text-decoration: none;
+  border-bottom: 1px solid rgba(31,74,143,.35);
+  padding-bottom: 1px; margin-left: 6px; white-space: nowrap;
+  transition: border-color .25s var(--ease), color .25s var(--ease);
+}
+.note__link:hover { color: var(--gold-2); border-bottom-color: var(--gold); }
+
 /* ── why bento ────────────────────────────────────────── */
 .why { background: linear-gradient(180deg, var(--milk), var(--sand)); }
 .why__bento {
@@ -570,13 +578,13 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 .why-card:hover { transform: translateY(-5px); }
 .why-card h3 { font-family: var(--font-d); font-weight: 400; font-size: 20px; color: var(--ink); margin-bottom: 8px; }
 .why-card p { font-size: 14px; color: var(--muted); }
-.why-card--wftga {
+.why-card--assoc {
   grid-column: span 3; display: flex; gap: 24px; align-items: center;
   background: var(--ink); border: 0;
 }
-.why-card--wftga img { width: 108px; height: 108px; flex: 0 0 auto; background: #fff; border-radius: 50%; padding: 10px; }
-.why-card--wftga h3 { color: #fff; }
-.why-card--wftga p { color: rgba(255,255,255,.72); }
+.why-card--assoc img { width: 108px; height: 108px; flex: 0 0 auto; object-fit: contain; background: #fff; border-radius: 20px; padding: 12px; }
+.why-card--assoc h3 { color: #fff; }
+.why-card--assoc p { color: rgba(255,255,255,.72); }
 .why-card--sapa {
   grid-column: span 3; display: flex; gap: 22px; align-items: center;
   background: linear-gradient(135deg, #FBF7EE, #F3E9D3);
@@ -594,14 +602,17 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   color: var(--gold); margin-bottom: 6px;
 }
 .why-card--grad .why-card__big { color: var(--blue); }
-.why-card:nth-child(5) { grid-column: span 2; }
-.why-card:nth-child(6) { grid-column: span 2; }
-.why-card:nth-child(7) { grid-column: span 2; }
+.why-card:nth-child(5) { grid-column: span 3; }
+.why-card:nth-child(6) { grid-column: span 3; }
+.why-card:nth-child(7) { grid-column: span 6; }
 .why-card__logo { width: 62px; height: 62px; object-fit: contain; margin-bottom: 12px; }
 .why-card__langs {
-  display: block; font-family: var(--font-d); font-size: 24px; color: var(--blue);
-  margin-bottom: 12px; letter-spacing: .04em;
+  display: block; font-family: var(--font-d); font-size: 19px; line-height: 1.5;
+  color: var(--blue); margin-bottom: 12px; letter-spacing: .06em;
 }
+.why-card--langs { display: flex; gap: clamp(24px, 3vw, 46px); align-items: flex-start; }
+.why-card--langs__head { flex: 0 0 40%; }
+.why-card--langs p { flex: 1; }
 .why-card__ico { display: block; color: var(--blue); margin-bottom: 12px; }
 
 /* ── reviews placeholder ──────────────────────────────── */
@@ -731,7 +742,7 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   .nav { display: none; }
   .header__wa { display: none; }
   .burger { display: block; }
-  .why-card--wftga, .why-card--sapa { grid-column: span 6; }
+  .why-card--assoc, .why-card--sapa { grid-column: span 6; }
   .why-card--exp, .why-card--grad { grid-column: span 3; }
   .why-card:nth-child(5), .why-card:nth-child(6) { grid-column: span 3; }
   .why-card:nth-child(7) { grid-column: span 6; }
@@ -776,8 +787,10 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   .col-img--b, .col-img--c { aspect-ratio: 1.22 / 1; }
   .col-img--c { border-radius: 18px 18px 64px 18px; }
   .why__bento .why-card { grid-column: span 6 !important; }
-  .why-card--wftga { flex-direction: column; text-align: center; align-items: center; gap: 16px; }
+  .why-card--assoc { flex-direction: column; text-align: center; align-items: center; gap: 16px; }
   .why-card--sapa { flex-direction: column; align-items: stretch; gap: 18px; }
+  .why-card--langs { flex-direction: column; gap: 14px; }
+  .why-card--langs__head { flex: none; }
   .why-card__cert { flex: none; max-width: 320px; margin-inline: auto; }
   .tprice { grid-template-columns: 1fr; }
   .tprice__item { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 10px; }
