@@ -564,6 +564,57 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 }
 .note__link:hover { color: var(--gold-2); border-bottom-color: var(--gold); }
 
+/* ── оффер «Набор в Астане» ───────────────────────────── */
+.astana-offer {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid rgba(194,150,60,.4);
+  border-radius: 22px;
+  padding: clamp(26px, 3.6vw, 42px) clamp(22px, 3.6vw, 44px);
+  margin-bottom: clamp(34px, 4.5vw, 54px);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
+}
+.astana-offer::before {
+  content: ''; position: absolute; inset: 0 0 auto 0; height: 3px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-2), var(--gold));
+}
+.astana-offer__kicker {
+  display: flex; align-items: center; gap: 9px;
+  font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase;
+  color: #8A6A2A; margin-bottom: 12px;
+}
+.astana-offer__dot {
+  width: 8px; height: 8px; border-radius: 50%; background: var(--wa);
+  box-shadow: 0 0 0 4px rgba(31,168,85,.18);
+  animation: pulse-dot 2.4s ease-in-out infinite;
+}
+@keyframes pulse-dot { 0%,100% { box-shadow: 0 0 0 4px rgba(31,168,85,.18); } 50% { box-shadow: 0 0 0 8px rgba(31,168,85,.06); } }
+.astana-offer h3 {
+  font-family: var(--font-d); font-weight: 400;
+  font-size: clamp(24px, 3.2vw, 34px); line-height: 1.15;
+  color: var(--ink); margin-bottom: 12px;
+}
+.astana-offer__lead { font-size: 15.5px; line-height: 1.6; color: var(--muted); }
+.astana-offer__head { margin-bottom: clamp(24px, 3vw, 32px); }
+.astana-offer__grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px;
+  margin-bottom: clamp(24px, 3vw, 32px);
+}
+.astana-offer__grid li {
+  background: linear-gradient(160deg, #FBF7EE, #F4EDDD);
+  border-radius: 16px; padding: 20px 20px 22px;
+}
+.astana-offer__grid h4 {
+  font-family: var(--font-d); font-weight: 400; font-size: 18px;
+  line-height: 1.25; color: var(--ink); margin-bottom: 8px;
+}
+.astana-offer__grid p { font-size: 13.5px; line-height: 1.5; color: var(--muted); }
+.astana-offer__foot {
+  display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+}
+.astana-offer__note { font-size: 13px; line-height: 1.5; color: var(--muted); flex: 1 1 260px; }
+
 /* ── why bento ────────────────────────────────────────── */
 .why { background: linear-gradient(180deg, var(--milk), var(--sand)); }
 .why__bento {
@@ -749,6 +800,7 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   .tours__grid { grid-template-columns: repeat(2, 1fr); }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .edu__grid { grid-template-columns: repeat(2, 1fr); }
+  .astana-offer__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 860px) {
@@ -792,6 +844,8 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   .why-card--langs { flex-direction: column; gap: 14px; }
   .why-card--langs__head { flex: none; }
   .why-card__cert { flex: none; max-width: 320px; margin-inline: auto; }
+  .astana-offer__grid { grid-template-columns: 1fr; }
+  .astana-offer__foot .btn { width: 100%; justify-content: center; }
   .tprice { grid-template-columns: 1fr; }
   .tprice__item { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 10px; }
   .tprice__item span { text-align: right; }
