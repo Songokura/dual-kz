@@ -622,6 +622,84 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 }
 .astana-offer__note { font-size: 13px; line-height: 1.5; color: var(--muted); flex: 1 1 260px; }
 
+/* ── прайс тренингов ──────────────────────────────────── */
+.prices { margin-top: clamp(30px, 4vw, 46px); }
+.prices__head { margin-bottom: clamp(18px, 2.4vw, 26px); }
+.prices__head--sub { margin-top: clamp(30px, 4vw, 46px); }
+.prices__head h3 {
+  font-family: var(--font-d); font-weight: 400;
+  font-size: clamp(23px, 3vw, 30px); line-height: 1.2;
+  color: var(--ink); margin-bottom: 8px;
+}
+.prices__lead { font-size: 15px; line-height: 1.6; color: var(--muted); }
+.prices__grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+.price-card {
+  --acc: var(--blue);
+  display: flex; flex-direction: column;
+  background: var(--paper); border-radius: 20px;
+  padding: 26px 22px 24px;
+  box-shadow: var(--shadow-soft);
+  border-top: 3px solid var(--acc);
+  transition: transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.price-card:hover { transform: translateY(-5px); box-shadow: 0 26px 60px -20px rgba(14,27,54,.3); }
+.price-card--blue   { --acc: #24559E; }
+.price-card--green  { --acc: #1B7A4E; }
+.price-card--violet { --acc: #5B3391; }
+.price-card--red    { --acc: #C22B3C; }
+.price-card--amber  { --acc: #D3860F; }
+.price-card__ico {
+  width: 50px; height: 50px; border-radius: 50%;
+  display: grid; place-items: center;
+  color: #fff; background: var(--acc);
+  margin-bottom: 15px; flex: 0 0 auto;
+}
+.price-card h4 {
+  font-family: var(--font-d); font-weight: 400;
+  font-size: 18.5px; line-height: 1.25; color: var(--ink); margin-bottom: 12px;
+}
+.price-card__list { display: flex; flex-direction: column; gap: 7px; margin-bottom: 20px; }
+.price-card__list li {
+  position: relative; padding-left: 15px;
+  font-size: 13.5px; line-height: 1.45; color: var(--muted);
+}
+.price-card__list li::before {
+  content: ''; position: absolute; left: 0; top: 8px;
+  width: 5px; height: 5px; border-radius: 50%; background: var(--acc);
+}
+.price-card__foot { margin-top: auto; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.price-card__days {
+  font-size: 12px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  color: #fff; background: var(--acc); padding: 6px 14px; border-radius: 999px;
+}
+.price-card__sum {
+  font-family: var(--font-d); font-size: 22px; line-height: 1.2; color: var(--acc);
+}
+.prices__foot {
+  display: grid; grid-template-columns: 1.05fr 1fr; gap: 18px;
+  margin-top: 18px;
+}
+.prices__bonus {
+  display: flex; gap: 18px; align-items: center;
+  background: var(--ink); border-radius: 20px;
+  padding: 24px 26px; box-shadow: var(--shadow-soft);
+}
+.prices__gift { color: var(--gold-2); flex: 0 0 auto; }
+.prices__bonus b, .prices__groups b {
+  display: block; font-family: var(--font-d); font-weight: 400; font-size: 19px;
+  margin-bottom: 5px;
+}
+.prices__bonus b { color: #fff; }
+.prices__bonus p { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,.74); }
+.prices__groups {
+  background: linear-gradient(160deg, #FBF7EE, #F2E9D6);
+  border: 1px solid rgba(194,150,60,.35);
+  border-radius: 20px; padding: 24px 26px;
+}
+.prices__groups b { color: var(--ink); }
+.prices__groups p { font-size: 14px; line-height: 1.5; color: var(--muted); }
+.prices__cta { margin-top: 20px; }
+
 /* ── why bento ────────────────────────────────────────── */
 .why { background: linear-gradient(180deg, var(--milk), var(--sand)); }
 .why__bento {
@@ -677,7 +755,7 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 .team { background: var(--milk); }
 .team__grid {
   display: grid; gap: clamp(18px, 2vw, 26px);
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
 }
 .team-card { text-align: center; }
 .team-card__photo { margin: 0 0 15px; }
@@ -879,6 +957,10 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 }
 
 /* ═══════════════ RESPONSIVE ═══════════════ */
+@media (max-width: 1160px) {
+  .prices__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 1060px) {
   .nav { display: none; }
   .header__wa { display: none; }
@@ -891,6 +973,7 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   .footer__grid { grid-template-columns: 1fr 1fr; }
   .edu__grid { grid-template-columns: repeat(2, 1fr); }
   .astana-offer__grid { grid-template-columns: repeat(2, 1fr); }
+  .prices__foot { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 860px) {
@@ -909,6 +992,7 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   .edu__stats { flex-direction: column; }
   .edu__photo img { aspect-ratio: 16 / 9; border-radius: 120px 120px 16px 16px; }
   .edu__wide { flex-direction: column; align-items: flex-start; }
+  .prices__grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 560px) {
@@ -936,6 +1020,9 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
   .why-card__cert { flex: none; max-width: 320px; margin-inline: auto; }
   .astana-offer__grid { grid-template-columns: 1fr; }
   .astana-offer__foot .btn { width: 100%; justify-content: center; }
+  .prices__grid { grid-template-columns: 1fr; }
+  .prices__cta .btn { width: 100%; justify-content: center; }
+  .prices__bonus { flex-direction: column; align-items: flex-start; gap: 12px; }
   .tprice { grid-template-columns: 1fr; }
   .tprice__item { flex-direction: row; align-items: baseline; justify-content: space-between; gap: 10px; }
   .tprice__item span { text-align: right; }
