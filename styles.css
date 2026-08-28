@@ -797,20 +797,45 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 }
 .gal__f:hover { border-color: var(--gold); color: var(--gold); }
 .gal__f.is-active { background: var(--ink); border-color: var(--ink); color: #fff; }
-.gal__grid { columns: 4; column-gap: 14px; }
+/* строгая сетка: одинаковые плитки 4:3, ряды всегда полные (12 делится на 4, 3 и 2) */
+.gal__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
 .gal__item {
-  display: block; width: 100%; padding: 0; border: 0; background: none;
-  margin: 0 0 14px; break-inside: avoid; border-radius: 14px; overflow: hidden;
+  display: block; width: 100%; padding: 0; border: 0; background: var(--sand-deep);
+  margin: 0; border-radius: 16px; overflow: hidden;
   box-shadow: var(--shadow-soft); cursor: zoom-in; position: relative;
+  aspect-ratio: 4 / 3;
+  transition: transform .45s var(--ease), box-shadow .45s var(--ease);
 }
-.gal__item img { width: 100%; height: auto; transition: transform .5s var(--ease), filter .5s var(--ease); }
-.gal__item:hover img { transform: scale(1.04); filter: brightness(1.04); }
+.gal__item::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(14,27,54,.72) 0%, rgba(14,27,54,.18) 38%, transparent 62%);
+  opacity: 0; transition: opacity .4s var(--ease); pointer-events: none;
+}
+.gal__item img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .6s var(--ease);
+}
+.gal__cap {
+  position: absolute; left: 14px; bottom: 12px; z-index: 2;
+  font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: #fff; opacity: 0; transform: translateY(6px);
+  transition: opacity .4s var(--ease), transform .4s var(--ease);
+  pointer-events: none;
+}
+.gal__item:hover, .gal__item:focus-visible {
+  transform: translateY(-4px); box-shadow: 0 26px 60px -20px rgba(14,27,54,.45);
+}
+.gal__item:hover img, .gal__item:focus-visible img { transform: scale(1.07); }
+.gal__item:hover::after, .gal__item:focus-visible::after { opacity: 1; }
+.gal__item:hover .gal__cap, .gal__item:focus-visible .gal__cap { opacity: 1; transform: none; }
+.gal__item:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 .gal__item[hidden] { display: none; }
+@media (hover: none) { .gal__item::after, .gal__cap { display: none; } }
 /* .btn — inline-flex, поэтому атрибут hidden сам по себе его не прячет */
 .gal__more { display: flex; justify-content: center; margin-top: 26px; }
 .gal__more .btn[hidden] { display: none; }
-@media (max-width: 1060px) { .gal__grid { columns: 3; } }
-@media (max-width: 720px)  { .gal__grid { columns: 2; column-gap: 10px; } .gal__item { margin-bottom: 10px; } }
+@media (max-width: 1060px) { .gal__grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 720px)  { .gal__grid { grid-template-columns: repeat(2, 1fr); gap: 10px; } .gal__cap { left: 10px; bottom: 9px; font-size: 10.5px; } }
 
 /* лайтбокс */
 .lbox {
