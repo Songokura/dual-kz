@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://songokura.github.io/dual-kz/sitemap.xml
+Sitemap: https://astanadual.kz/sitemap.xml

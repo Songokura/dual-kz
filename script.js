@@ -895,8 +895,11 @@
   /* ─────────────── init ────────────────────────────── */
   var saved = null;
   try { saved = localStorage.getItem(LANG_KEY); } catch (e) {}
-  if (saved && I18N[saved]) {
-    applyLang(saved);
+  /* язык из URL важнее сохранённого: по русскому объявлению должна открыться русская версия */
+  var forced = (location.search.match(/[?&]lang=(ru|kk|en)/) || [])[1];
+  var startLang = (forced && I18N[forced]) ? forced : (saved && I18N[saved] ? saved : null);
+  if (startLang) {
+    applyLang(startLang);
   } else {
     splitHeroTitle();
   }
