@@ -790,17 +790,36 @@
     return 'https://wa.me/' + num + '?text=' + encodeURIComponent(msg);
   }
 
-  /* delegated clicks: tel + WhatsApp (clean hooks for future gtag conversions) */
+  /* ─────────────── конверсии Google Ads ───────────── */
+  /* Идентификаторы объявлены в index.html (window.DUAL_CONV).
+     Всё обёрнуто в проверки: если gtag не загрузился (блокировщик, офлайн),
+     сайт продолжает работать как раньше. */
+  function conv(kind, params) {
+    var ids = window.DUAL_CONV;
+    if (typeof gtag !== 'function' || !ids || !ids[kind]) return;
+    var data = { send_to: ids[kind], value: 1.0, currency: 'USD' };
+    if (params) { for (var k in params) { if (params.hasOwnProperty.call(params, k)) data[k] = params[k]; } }
+    gtag('event', 'conversion', data);
+  }
+
+  /* delegated clicks: tel + WhatsApp + email → конверсии Google Ads */
   document.addEventListener('click', function (e) {
     var wa = e.target.closest('a[data-wa]');
     if (wa) {
       wa.setAttribute('href', waLink(wa.getAttribute('data-wa')));
-      /* gtag hook: wa.dataset.wa is the intent (excursion|tour|training|general) */
+      /* конверсия «Контакт»; intent = excursion|tour|training|general */
+      conv('contact', { intent: wa.getAttribute('data-wa') || 'general', method: 'whatsapp' });
       return;
     }
     var tel = e.target.closest('a[href^="tel:"]');
     if (tel) {
-      /* gtag hook: phone click */
+      /* конверсия «Интерактивные номера телефонов» */
+      if (typeof gtag_report_conversion === 'function') gtag_report_conversion();
+      return;
+    }
+    var mail = e.target.closest('a[href^="mailto:"]');
+    if (mail) {
+      conv('contact', { method: 'email' });
       return;
     }
   });
@@ -819,7 +838,8 @@
       var url = waLink(topic, text);
       document.getElementById('cformThanks').hidden = false;
       window.open(url, '_blank', 'noopener');
-      /* gtag hook: form submit, topic = topic */
+      /* конверсия «Отправка формы для потенциальных клиентов» */
+      conv('lead', { intent: topic });
     });
   }
 

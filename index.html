@@ -3,6 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18425034378"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-18425034378');
+
+    /* Идентификаторы конверсий Google Ads - используются из script.js */
+    window.DUAL_CONV = {
+      phone: 'AW-18425034378/-gyqCNjRtu4cEIrt3tFE',
+      lead:  'AW-18425034378/4lZ8CJvWtu4cEIrt3tFE',
+      contact: 'AW-18425034378/x2BkCLr5qu4cEIrt3tFE'
+    };
+
+    /* Клик по телефону. Если передан url - переход после отправки конверсии,
+       но не дольше 800 мс, чтобы звонок не зависел от ответа Google. */
+    function gtag_report_conversion(url) {
+      var done = false;
+      var callback = function () {
+        if (done) return;
+        done = true;
+        if (typeof (url) != 'undefined') { window.location = url; }
+      };
+      gtag('event', 'conversion', {
+        'send_to': window.DUAL_CONV.phone,
+        'value': 1.0,
+        'currency': 'USD',
+        'event_callback': callback
+      });
+      if (typeof (url) != 'undefined') { setTimeout(callback, 800); }
+      return false;
+    }
+  </script>
   <title>DUAL.KZ — туры и экскурсии по Казахстану, обучение гидов | Астана</title>
   <meta name="description" content="Туристский информационно-учебный центр DUAL.KZ, Астана. Экскурсии по Астане, туры по Казахстану, приём иностранных туристов, трансферы — и профессиональная подготовка гидов и экскурсоводов. Учредитель СРО «KazGuides».">
   <link rel="canonical" href="https://astanadual.kz/">
@@ -24,7 +59,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260904-1">
+  <link rel="stylesheet" href="styles.css?v=20260905-1">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -917,6 +952,6 @@
     <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg>
   </a>
 
-  <script src="script.js?v=20260904-1" defer></script>
+  <script src="script.js?v=20260905-1" defer></script>
 </body>
 </html>
