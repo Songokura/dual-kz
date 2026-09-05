@@ -531,7 +531,8 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 .edu__stats span { font-size: 13px; line-height: 1.45; color: var(--muted); }
 .edu__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .edu-card {
-  position: relative; background: var(--paper); border-radius: 20px;
+  position: relative; display: flex; flex-direction: column;
+  background: var(--paper); border-radius: 20px;
   padding: 30px 28px 24px; box-shadow: var(--shadow-soft);
   border-top: 3px solid var(--gold);
   transition: transform .4s var(--ease), box-shadow .4s var(--ease);
@@ -548,8 +549,12 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 .edu-card__meta {
   display: inline-block; font-size: 12.5px; font-weight: 700;
   color: #8A6A2A; background: rgba(194,150,60,.1);
-  padding: 6px 13px; border-radius: 999px; margin-bottom: 0 !important;
+  padding: 6px 13px; border-radius: 999px; margin-bottom: 18px !important;
+  align-self: flex-start;
 }
+/* кнопку прижимаем к низу карточки, чтобы в ряду они стояли на одной линии;
+   минимальный отступ сверху даёт margin-bottom плашки «по запросу» */
+.edu-card .card-wa { margin-top: auto; }
 .edu__wide {
   margin-top: 20px;
   background: var(--ink); border-radius: 20px;
@@ -675,6 +680,28 @@ body.menu-open .mmenu__nav a:nth-child(7) { transition-delay: .29s; }
 .price-card__sum {
   font-family: var(--font-d); font-size: 22px; line-height: 1.2; color: var(--acc);
 }
+/* ── кнопка WhatsApp внутри карточки ──
+   Пишет в чат уже с названием этой карточки: Айгуль сразу видит,
+   какой тренинг или маршрут смотрел человек. Цвет берётся из --acc карточки,
+   у карточек обучения --acc не задан - подхватывается золотой. */
+.card-wa {
+  --cw: var(--acc, var(--gold));
+  margin-top: 18px;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 11px 14px; border-radius: 12px;
+  border: 1px solid var(--cw); color: var(--cw); background: transparent;
+  font-size: 13.5px; font-weight: 700; line-height: 1;
+  transition: background .3s var(--ease), color .3s var(--ease), transform .3s var(--ease);
+}
+.card-wa:hover { background: var(--cw); color: #fff; transform: translateY(-2px); }
+.card-wa svg { flex: 0 0 auto; }
+/* на фотокарточках туров - светлый вариант поверх затемнения */
+.card-wa--light {
+  --cw: rgba(255,255,255,.62);
+  margin-top: 14px; color: #fff;
+}
+.card-wa--light:hover { background: #fff; color: var(--ink); border-color: #fff; }
+
 .prices__foot {
   display: grid; grid-template-columns: 1.05fr 1fr; gap: 18px;
   margin-top: 18px;

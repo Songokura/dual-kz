@@ -59,7 +59,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260905-1">
+  <link rel="stylesheet" href="styles.css?v=20260905-2">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -189,7 +189,7 @@
       <h1 class="hero__title" id="heroTitle" data-i18n="hero_title">Показываем Казахстан — и&nbsp;учим показывать</h1>
       <p class="hero__sub reveal" data-i18n="hero_sub">DUAL.KZ — туристский информационно-учебный центр: авторские экскурсии и туры по всему Казахстану и профессиональная подготовка гидов и экскурсоводов.</p>
       <div class="hero__cta reveal">
-        <a class="btn btn--gold btn--lg" href="https://wa.me/77008821000" target="_blank" rel="noopener" data-wa="tour" data-i18n="hero_cta1">Подобрать тур</a>
+        <a class="btn btn--gold btn--lg" href="https://wa.me/77008821000" target="_blank" rel="noopener" data-wa="tour" data-wa-title="tours_title" data-wa-tpl="tour" data-i18n="hero_cta1">Подобрать тур</a>
         <a class="btn btn--ghost btn--lg" href="#treningi-astana" data-i18n="hero_cta2">Тренинги гидов в Астане</a>
       </div>
       <ul class="hero__trust reveal">
@@ -261,7 +261,7 @@
         </ul>
         <p class="note reveal" data-i18n="ast_note">Программу и время подберём под вас — напишите нам.</p>
         <div class="reveal">
-          <a class="btn btn--blue" href="https://wa.me/77080243941" target="_blank" rel="noopener" data-wa="excursion" data-i18n="ast_cta">Заказать экскурсию</a>
+          <a class="btn btn--blue" href="https://wa.me/77080243941" target="_blank" rel="noopener" data-wa="excursion" data-wa-title="ast_title" data-wa-tpl="service" data-i18n="ast_cta">Заказать экскурсию</a>
         </div>
       </div>
       <div class="astana__collage" aria-hidden="false">
@@ -286,6 +286,10 @@
           <div class="tour-card__body">
             <h3 data-i18n="tour1_title">Бурабай и север Казахстана</h3>
             <p data-i18n="tour1_text">Озёра, сосновые боры и скалы «казахстанской Швейцарии» — природа в паре часов от столицы.</p>
+            <a class="card-wa card-wa--light" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+               data-wa="tour" data-wa-title="tour1_title" data-wa-tpl="tour">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_tour">Узнать программу</span>
+            </a>
           </div>
         </article>
         <article class="tour-card reveal-img">
@@ -293,6 +297,10 @@
           <div class="tour-card__body">
             <h3 data-i18n="tour2_title">Чарын и юг</h3>
             <p data-i18n="tour2_text">Каньоны, горы и степные дороги Семиречья — самые кинематографичные пейзажи страны.</p>
+            <a class="card-wa card-wa--light" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+               data-wa="tour" data-wa-title="tour2_title" data-wa-tpl="tour">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_tour">Узнать программу</span>
+            </a>
           </div>
         </article>
         <article class="tour-card reveal-img" id="sakralnye-marshruty">
@@ -300,6 +308,10 @@
           <div class="tour-card__body">
             <h3 data-i18n="tour3_title">Сакральные маршруты</h3>
             <p data-i18n="tour3_text">Туркестан, древние мавзолеи и святые места Великой степи — путешествия к истокам.</p>
+            <a class="card-wa card-wa--light" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+               data-wa="tour" data-wa-title="tour3_title" data-wa-tpl="tour">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_tour">Узнать программу</span>
+            </a>
           </div>
         </article>
         <article class="tour-card reveal-img">
@@ -307,12 +319,16 @@
           <div class="tour-card__body">
             <h3 data-i18n="tour4_title">Авторские маршруты</h3>
             <p data-i18n="tour4_text">Маршруты, которых нет в каталогах: разрабатываем программу под ваши интересы, сроки и ритм.</p>
+            <a class="card-wa card-wa--light" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+               data-wa="tour" data-wa-title="tour4_title" data-wa-tpl="tour">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_tour">Узнать программу</span>
+            </a>
           </div>
         </article>
       </div>
       <div class="tours__foot reveal">
         <p class="note" data-i18n="tours_note">Расскажите, что вам интересно, — пришлём варианты программ, даты и цены в WhatsApp.</p>
-        <a class="btn btn--blue" href="https://wa.me/77008821000" target="_blank" rel="noopener" data-wa="tour" data-i18n="tours_cta">Подобрать тур</a>
+        <a class="btn btn--blue" href="https://wa.me/77008821000" target="_blank" rel="noopener" data-wa="tour" data-wa-title="tours_title" data-wa-tpl="tour" data-i18n="tours_cta">Подобрать тур</a>
       </div>
     </div>
   </section>
@@ -347,7 +363,7 @@
           <li data-i18n="for_li3">Индивидуальные и групповые форматы</li>
         </ul>
         <div class="reveal">
-          <a class="btn btn--gold" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="general" data-i18n="for_cta">Написать в WhatsApp</a>
+          <a class="btn btn--gold" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="general" data-wa-title="for_title" data-wa-tpl="service" data-i18n="for_cta">Написать в WhatsApp</a>
         </div>
       </div>
     </div>
@@ -383,7 +399,7 @@
         </div>
         <p class="note reveal" data-i18n="tr_partner">Совместно с этноцентром TAMYR. Путешествуй с комфортом!</p>
         <div class="reveal">
-          <a class="btn btn--blue" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="general" data-i18n="tr_cta">Обсудить трансфер</a>
+          <a class="btn btn--blue" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="general" data-wa-title="tr_title" data-wa-tpl="service" data-i18n="tr_cta">Обсудить трансфер</a>
         </div>
       </div>
       <figure class="transfer__photo reveal-img">
@@ -412,7 +428,7 @@
           <span class="chip" data-i18n="et_chip3">Ремёсла и мастер-классы</span>
         </div>
         <div class="etno__cta reveal">
-          <a class="btn btn--blue" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="general" data-i18n="et_cta">Обсудить программу</a>
+          <a class="btn btn--blue" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="general" data-wa-title="et_title" data-wa-tpl="service" data-i18n="et_cta">Обсудить программу</a>
           <a class="btn btn--ig" href="https://www.instagram.com/tamyr_ethnocenter/" target="_blank" rel="noopener" aria-label="Instagram этноцентра TAMYR">
             <svg viewBox="0 0 24 24" width="19" height="19" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5.2"/><circle cx="12" cy="12" r="4.1"/><circle cx="17.4" cy="6.6" r="1.15" fill="currentColor" stroke="none"/></svg>
             <span data-i18n="et_partner_ig">TAMYR в Instagram</span>
@@ -455,7 +471,7 @@
           </li>
         </ul>
         <div class="astana-offer__foot">
-          <a class="btn btn--gold btn--lg" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="training" data-i18n="edua_cta">Записаться на тренинг в Астане</a>
+          <a class="btn btn--gold btn--lg" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="training" data-wa-title="edua_title" data-wa-tpl="training" data-i18n="edua_cta">Записаться на тренинг в Астане</a>
           <p class="astana-offer__note" data-i18n="edua_note">В других городах Казахстана обучение идёт через наших представителей — напишите, подберём ближайший набор.</p>
         </div>
       </div>
@@ -502,6 +518,10 @@
             <span class="price-card__days" data-i18n="pr1_d">5 дней</span>
             <span class="price-card__sum" data-i18n="pr1_sum">от 79 000 ₸</span>
           </div>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="pr1_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
         <article class="price-card price-card--green reveal" id="regionalnyy-gid">
           <span class="price-card__ico" aria-hidden="true">
@@ -516,6 +536,10 @@
             <span class="price-card__days" data-i18n="pr2_d">от 14 дней</span>
             <span class="price-card__sum" data-i18n="pr2_sum">от 150 000 ₸</span>
           </div>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="pr2_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
         <article class="price-card price-card--violet reveal" id="gidy-kaz-kit">
           <span class="price-card__ico" aria-hidden="true">
@@ -529,6 +553,10 @@
             <span class="price-card__days" data-i18n="pr3_d">от 14 дней</span>
             <span class="price-card__sum" data-i18n="pr3_sum">от 150 000 ₸</span>
           </div>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="pr3_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
         <article class="price-card price-card--red reveal" id="pervaya-pomosh">
           <span class="price-card__ico" aria-hidden="true">
@@ -542,6 +570,10 @@
             <span class="price-card__days" data-i18n="pr4_d">1 день</span>
             <span class="price-card__sum" data-i18n="pr4_sum">29 000 ₸</span>
           </div>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="pr4_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
         <article class="price-card price-card--amber reveal" id="transfernye-soprovozhdayushchie">
           <span class="price-card__ico" aria-hidden="true">
@@ -556,6 +588,10 @@
             <span class="price-card__days" data-i18n="pr5_d">5 дней</span>
             <span class="price-card__sum" data-i18n="pr5_sum">от 60 000 ₸</span>
           </div>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="pr5_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
         </div>
         <div class="prices__foot reveal">
@@ -574,7 +610,7 @@
           </div>
         </div>
         <div class="prices__cta reveal">
-          <a class="btn btn--gold btn--lg" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="training" data-i18n="pr_cta">Узнать даты ближайшей группы</a>
+          <a class="btn btn--gold btn--lg" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="training" data-wa-title="edu_title" data-wa-tpl="training" data-i18n="pr_cta">Узнать даты ближайшей группы</a>
         </div>
       </div>
 
@@ -588,18 +624,30 @@
           <h3 data-i18n="edu_more1_t">Тренинг «Туристский агент»</h3>
           <p data-i18n="edu_more1_d">Профессия с нуля: продукты, бронирование, работа с клиентом и правовые основы туризма.</p>
           <p class="edu-card__meta" data-i18n="edu_meta">Программа, часы и даты — по запросу</p>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="edu_more1_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
         <article class="edu-card reveal" id="trening-instruktor">
           <span class="edu-card__num" aria-hidden="true">02</span>
           <h3 data-i18n="edu_more2_t">Тренинг «Инструктор по туризму»</h3>
           <p data-i18n="edu_more2_d">Активные маршруты и работа с группами на природе — от планирования до техники безопасности.</p>
           <p class="edu-card__meta" data-i18n="edu_meta">Программа, часы и даты — по запросу</p>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="edu_more2_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
         <article class="edu-card reveal" id="treningi-turoperatorov">
           <span class="edu-card__num" aria-hidden="true">03</span>
           <h3 data-i18n="edu_more3_t">Тренинги для туроператоров и турагентов</h3>
           <p data-i18n="edu_more3_d">Корпоративные программы для команд туркомпаний и турагентств: сервис, приём гостей, стандарты отрасли.</p>
           <p class="edu-card__meta" data-i18n="edu_meta">Программа, часы и даты — по запросу</p>
+          <a class="card-wa" href="https://wa.me/77078281548" target="_blank" rel="noopener"
+             data-wa="training" data-wa-title="edu_more3_t" data-wa-tpl="training">
+            <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg><span data-i18n="card_wa_edu">Записаться</span>
+          </a>
         </article>
       </div>
       <div class="edu__wide reveal" id="individualnye-programmy">
@@ -607,7 +655,7 @@
           <h3 data-i18n="edu_ind_title">Индивидуальные программы</h3>
           <p data-i18n="edu_ind_text">Соберём программу обучения под задачи вашей команды или ваш личный план развития — по запросу.</p>
         </div>
-        <a class="btn btn--gold btn--lg" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="training" data-i18n="edu_cta">Записаться на тренинг</a>
+        <a class="btn btn--gold btn--lg" href="https://wa.me/77078281548" target="_blank" rel="noopener" data-wa="training" data-wa-title="edu_ind_title" data-wa-tpl="training" data-i18n="edu_cta">Записаться на тренинг</a>
       </div>
     </div>
   </section>
@@ -952,6 +1000,6 @@
     <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.2-3.5-.7-2.9-1.2-4.8-4.1-4.9-4.3-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.4.7-.4h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.2.1.4 0 .6l-.4.6c-.2.2-.4.4-.2.8.2.3.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.3.2.6.1.8-.1l1-1.1c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4.1.1.1.8-.2 1.4Z"/></svg>
   </a>
 
-  <script src="script.js?v=20260905-1" defer></script>
+  <script src="script.js?v=20260905-2" defer></script>
 </body>
 </html>

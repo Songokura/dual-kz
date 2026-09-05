@@ -201,7 +201,13 @@
       wa_msg_excursion: 'Здравствуйте! Хочу заказать экскурсию по Астане.',
       wa_msg_tour: 'Здравствуйте! Помогите подобрать тур по Казахстану.',
       wa_msg_training: 'Здравствуйте! Хочу записаться на тренинг.',
-      wa_msg_general: 'Здравствуйте! Пишу с сайта DUAL.KZ.'
+      wa_msg_general: 'Здравствуйте! Пишу с сайта DUAL.KZ.',
+      /* {name} подставляется из заголовка карточки, по которой кликнули */
+      wa_tpl_training: 'Здравствуйте! Пишу с сайта DUAL.KZ.\nИнтересует: {name}\nПодскажите даты ближайшей группы и условия участия.',
+      wa_tpl_tour: 'Здравствуйте! Пишу с сайта DUAL.KZ.\nИнтересует: {name}\nПодскажите программу, даты и стоимость.',
+      wa_tpl_service: 'Здравствуйте! Пишу с сайта DUAL.KZ.\nИнтересует: {name}\nПодскажите условия и стоимость.',
+      card_wa_edu: 'Записаться',
+      card_wa_tour: 'Узнать программу'
     },
 
     kk: {
@@ -399,7 +405,12 @@
       wa_msg_excursion: 'Сәлеметсіз бе! Астана бойынша экскурсияға тапсырыс бергім келеді.',
       wa_msg_tour: 'Сәлеметсіз бе! Қазақстан бойынша тур таңдауға көмектесіңізші.',
       wa_msg_training: 'Сәлеметсіз бе! Тренингке жазылғым келеді.',
-      wa_msg_general: 'Сәлеметсіз бе! DUAL.KZ сайтынан жазып отырмын.'
+      wa_msg_general: 'Сәлеметсіз бе! DUAL.KZ сайтынан жазып отырмын.',
+      wa_tpl_training: 'Сәлеметсіз бе! DUAL.KZ сайтынан жазып отырмын.\nҚызықтырады: {name}\nЖақын топтың басталу күні мен қатысу шарттарын айтып жіберіңізші.',
+      wa_tpl_tour: 'Сәлеметсіз бе! DUAL.KZ сайтынан жазып отырмын.\nҚызықтырады: {name}\nБағдарламасын, күндері мен құнын айтып жіберіңізші.',
+      wa_tpl_service: 'Сәлеметсіз бе! DUAL.KZ сайтынан жазып отырмын.\nҚызықтырады: {name}\nШарттары мен құнын айтып жіберіңізші.',
+      card_wa_edu: 'Жазылу',
+      card_wa_tour: 'Бағдарламаны сұрау'
     },
 
     en: {
@@ -597,7 +608,12 @@
       wa_msg_excursion: 'Hello! I would like to book a city tour of Astana.',
       wa_msg_tour: 'Hello! Please help me find a tour across Kazakhstan.',
       wa_msg_training: 'Hello! I would like to enrol in a training programme.',
-      wa_msg_general: 'Hello! I am writing from the DUAL.KZ website.'
+      wa_msg_general: 'Hello! I am writing from the DUAL.KZ website.',
+      wa_tpl_training: 'Hello! I am writing from the DUAL.KZ website.\nI am interested in: {name}\nPlease tell me the dates of the next group and the terms.',
+      wa_tpl_tour: 'Hello! I am writing from the DUAL.KZ website.\nI am interested in: {name}\nPlease send me the programme, dates and prices.',
+      wa_tpl_service: 'Hello! I am writing from the DUAL.KZ website.\nI am interested in: {name}\nPlease tell me the terms and the price.',
+      card_wa_edu: 'Enrol',
+      card_wa_tour: 'Ask for the programme'
     }
   };
 
@@ -784,6 +800,41 @@
     general: '77078281548'
   };
 
+  /* Разделы, у которых есть внятное название для плавающей кнопки WhatsApp:
+     id секции → [ключ заголовка, шаблон сообщения, номер] */
+  var SECTION_WA = {
+    'ekskursii-astana':    ['ast_title',   'service',  'excursion'],
+    'tury-kazakhstan':     ['tours_title', 'tour',     'tour'],
+    'inostrannym-turistam':['for_title',   'service',  'general'],
+    'transfer':            ['tr_title',    'service',  'general'],
+    'etnoprogrammy':       ['et_title',    'service',  'general'],
+    'obuchenie':           ['edu_title',   'training', 'training']
+  };
+
+  /* Какой раздел человек читает прямо сейчас - по центру экрана.
+     Нужно плавающей кнопке: она одна на всю страницу, а написать должна по делу. */
+  function currentSectionWA() {
+    var mid = window.innerHeight / 2;
+    for (var id in SECTION_WA) {
+      var el = document.getElementById(id);
+      if (!el) continue;
+      var r = el.getBoundingClientRect();
+      if (r.top <= mid && r.bottom >= mid) return SECTION_WA[id];
+    }
+    return null;
+  }
+
+  /* Текст для WhatsApp. Если известен ключ заголовка - подставляем название
+     карточки на текущем языке: Айгуль сразу видит, какой тренинг или маршрут
+     смотрел человек, и не тратит первое сообщение на «а что именно вас интересует?». */
+  function waMessage(kind, titleKey, tplKind) {
+    var d = I18N[currentLang] || I18N.ru;
+    var name = titleKey ? (d[titleKey] || I18N.ru[titleKey] || '') : '';
+    if (!name) return d['wa_msg_' + kind] || d.wa_msg_general;
+    var tpl = d['wa_tpl_' + (tplKind || 'service')] || d.wa_tpl_service;
+    return tpl.replace('{name}', name);
+  }
+
   function waLink(kind, text) {
     var num = WA_NUMBERS[kind] || WA_NUMBERS.general;
     var msg = text || I18N[currentLang]['wa_msg_' + kind] || I18N[currentLang].wa_msg_general;
@@ -806,9 +857,17 @@
   document.addEventListener('click', function (e) {
     var wa = e.target.closest('a[data-wa]');
     if (wa) {
-      wa.setAttribute('href', waLink(wa.getAttribute('data-wa')));
-      /* конверсия «Контакт»; intent = excursion|tour|training|general */
-      conv('contact', { intent: wa.getAttribute('data-wa') || 'general', method: 'whatsapp' });
+      var kind = wa.getAttribute('data-wa') || 'general';
+      var titleKey = wa.getAttribute('data-wa-title') || '';
+      var tplKind = wa.getAttribute('data-wa-tpl') || '';
+      /* у плавающей кнопки своей темы нет - берём раздел, который сейчас на экране */
+      if (!titleKey && wa.classList.contains('fab')) {
+        var sec = currentSectionWA();
+        if (sec) { titleKey = sec[0]; tplKind = sec[1]; kind = sec[2]; }
+      }
+      wa.setAttribute('href', waLink(kind, waMessage(kind, titleKey, tplKind)));
+      /* конверсия «Контакт»; item - конкретный тренинг или маршрут */
+      conv('contact', { intent: kind, method: 'whatsapp', item: titleKey || 'general' });
       return;
     }
     var tel = e.target.closest('a[href^="tel:"]');
